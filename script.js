@@ -2,6 +2,8 @@
 const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
+const DIGITALTIME = document.getElementById("digital-time");
+const DATE = document.getElementById("day");
 
 function runClock(){
     //Get the current date in hours, minutes and seconds
@@ -9,6 +11,12 @@ function runClock(){
  let hrs = date.getHours();
  let min = date.getMinutes();
  let sec = date.getSeconds();
+
+ let digitalTime = hrs+" : "+ min +" : "+ sec;
+ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+ 
+DATE.textContent = date.toLocaleDateString('en-us', options);
+ DIGITALTIME.textContent = digitalTime;
 
 //Get the relative position of the clock hands
 let hrPosition = (hrs *(360/12) )+ (min*(360/60)/12);

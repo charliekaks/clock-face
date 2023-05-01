@@ -1,12 +1,19 @@
 /* Layout */
 .main {
     display: flex;
-    padding: 2em;
+    padding: 0.5em;
     height: 90vh;
     justify-content: center;
     align-items: middle;
 }
-
+@font-face {
+    font-family: Bruno;
+    src: url(BrunoAceSC-Regular.ttf);
+  }
+ h3, p{
+    font-family: Bruno;
+    text-align: center;
+}
 .clockbox,
 #clock {
     width: 100%;
